@@ -3,8 +3,8 @@
 ```
 git subtree add -P deploy/ git@codeup.aliyun.com:5f10fd25d2481460393375d0/base/deploy/deploy-php.git master
 
-cp deploy/Dockerfile .
-cp deploy/docker-entrypoint.sh .
+cp deploy/fpm/Dockerfile .
+cp deploy/acm.sh .
 ```
 
 ## 构建镜像
