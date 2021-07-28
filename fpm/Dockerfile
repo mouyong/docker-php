@@ -24,7 +24,8 @@ COPY --from=composer /app/vendor/ /var/www/html/vendor/
 COPY ./deploy/docker/supervisord-queue.conf /etc/supervisor/conf.d/api-queue.conf
 
 COPY ./deploy/docker/fpm/docker-run-fpm.sh /usr/local/bin/docker-run
+COPY ./deploy/docker/cron-run.sh /usr/local/bin/cron-run
 
 RUN chown -R www-data:www-data /var/www && \
  chmod 0777 -R /var/www/html/bootstrap/cache /var/www/html/storage && \
- chmod +x /usr/local/bin/docker-run /usr/local/bin/docker-php-entrypoint
+ chmod +x /usr/local/bin/docker-run /usr/local/bin/cron-run /usr/local/bin/docker-php-entrypoint
