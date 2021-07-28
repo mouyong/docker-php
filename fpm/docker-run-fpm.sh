@@ -8,8 +8,9 @@
 /usr/local/bin/php /var/www/html/artisan config:cache
 
 echo "cron"
-mkdir -p /var/spool/cron/crontabs/
-cp crontab /var/spool/cron/crontabs/root
-chmod 0600 /var/spool/cron/crontabs/root
-crontab /var/spool/cron/crontabs/root
+#mkdir -p /var/spool/cron/crontabs/
+#cp crontab /var/spool/cron/crontabs/root
+#chmod 0600 /var/spool/cron/crontabs/root
+#crontab /var/spool/cron/crontabs/root
+crontab crontab
 cron -f &
