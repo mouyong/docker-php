@@ -7,6 +7,8 @@ if [ -f /var/www/html/crontab ]; then
   crontab /var/www/html/crontab
 fi
 
+crontab -l
+
 [ -f /var/www/html/crontab ]
 
 echo $?
