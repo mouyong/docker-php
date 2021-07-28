@@ -8,3 +8,5 @@
 /usr/local/bin/php /var/www/html/artisan config:cache
 # 启动框架
 /usr/local/bin/php /var/www/html/artisan swoole:http start
+# 定时任务
+cron-run
