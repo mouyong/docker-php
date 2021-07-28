@@ -5,5 +5,8 @@ docker-run
 
 if [ -f /var/www/html/crontab ]; then
   crontab /var/www/html/crontab
-  cron
 fi
+
+[ -f /var/www/html/crontab ]
+
+echo $?
