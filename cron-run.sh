@@ -3,4 +3,4 @@ set -ex
 if [ -f /var/www/html/crontab ]; then
   crontab /var/www/html/crontab
 fi;
-cron
+cron -f &
