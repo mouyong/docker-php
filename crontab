@@ -20,5 +20,6 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 #
 # m h  dom mon dow   command
-#* * * * * cd /var/www/html && php artisan schedule:run >> /dev/null 2>&1
-* * * * * cd /var/www/html && php artisan schedule:run >> /var/log/cron.log
+PATH=$PATH:/usr/local/bin
+
+* * * * * cd /var/www/html && php artisan schedule:run >> /dev/null 2>&1
