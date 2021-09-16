@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/mouyong-base/php7.4-composer:1.0.0 as composer
+FROM registry.cn-shenzhen.aliyuncs.com/mouyong-base/php8.0-composer:1.0.0 as composer
 
 COPY database/ /app/database/
 
@@ -15,7 +15,7 @@ RUN cd /app \
            --no-suggest \
            --no-dev
 
-FROM registry.cn-shenzhen.aliyuncs.com/mouyong-base/php7.4-fpm:1.0.0
+FROM registry.cn-shenzhen.aliyuncs.com/mouyong-base/php8.0-fpm:1.0.0
 
 COPY . /var/www/html
 
