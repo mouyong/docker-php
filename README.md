@@ -1,14 +1,14 @@
 ## 添加部署相关程序
 
 ```
-git subtree add -P deploy/ https://github.com/mouyong/docker-php.git master
+git subtree add -P deploy/docker/ https://github.com/mouyong/docker-php.git master
 
 # fpm 镜像构建
-cp deploy/fpm/Dockerfile .
+cp deploy/docker/fpm/Dockerfile .
 # 环境变量
-cp deploy/acm.sh .
+cp deploy/docker/acm.sh .
 # 定时任务
-cp deploy/crontab .
+cp deploy/docker/crontab .
 ```
 
 ## 构建镜像
