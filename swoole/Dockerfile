@@ -1,6 +1,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/mouyong-base/php7.4-composer:1.0.0 as composer
 
 COPY database/ /app/database/
+COPY packages/ /app/packages/
 
 COPY composer.json composer.lock /app/
 
