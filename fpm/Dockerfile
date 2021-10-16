@@ -21,7 +21,7 @@ COPY . /var/www/html
 
 COPY --from=composer /app/vendor/ /var/www/html/vendor/
 
-COPY ./deploy/docker/supervisord-queue.conf /etc/supervisor/conf.d/api-queue.conf
+COPY ./deploy/docker/supervisord-queue.conf /etc/supervisor/conf.d/queue.conf
 
 COPY ./deploy/docker/fpm/docker-run-fpm.sh /usr/local/bin/docker-run
 COPY ./deploy/docker/cron-run.sh /usr/local/bin/cron-run
